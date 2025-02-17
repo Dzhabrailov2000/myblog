@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список постов</title>
+</head>
+<body>
+<h1>Список постов</h1>
+<ul>
+    <li th:each="post : ${posts}">
+        <strong th:text="${post.title}">Заголовок</strong><br>
+        <img th:if="${post.imageUrl}" th:src="${post.imageUrl}" width="200"/><br>
+        <span th:text="${post.content}">Текст</span><br>
+        <em>Теги:</em>
+        <span th:text="${post.tags}">Нет</span>
+        <hr>
+    </li>
+</ul>
+<form action="posts/add">
+    <button type="submit">Добавить пост</button>
+</form>
+</body>
+</html>

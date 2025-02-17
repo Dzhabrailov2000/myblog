@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить пост</title>
+</head>
+<body>
+<h1>Добавить пост</h1>
+
+<!-- Форма отправляет данные методом POST на /add -->
+<form action="add" method="post">
+    <label>Заголовок:</label>
+    <input type="text" name="title" required/><br><br>
+
+    <label>Ссылка на картинку:</label>
+    <input type="text" name="imageUrl"/><br><br>
+
+    <label>Текст поста:</label><br>
+    <textarea name="content" rows="5" cols="40" required></textarea><br><br>
+
+    <label>Теги (через запятую):</label>
+    <input type="text" name="tags"/><br><br>
+
+    <button type="submit">Добавить</button>
+</form>
+
+<br>
+<a href="/">Вернуться к списку</a>
+</body>
+</html>
